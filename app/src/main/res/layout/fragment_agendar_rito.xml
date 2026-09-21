@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FE">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTituloPainelRitos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Hub de Ritos Ágeis &amp; Cerimônias"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#263238"
+            android:layout_marginBottom="16dp" />
+
+        <!-- VISÃO EXCLUSIVA DO MEMBRO: PRÓXIMO RITO E ACESSO RÁPIDO -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E8EAF6"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📌 Próxima Reunião Agendada"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#3F51B5"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvProximoRitoInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Carregando rito..."
+                    android:textSize="13sp"
+                    android:textColor="#37474F"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnEntrarReuniao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎥 Entrar na Videochamada (Meet/Teams)"
+                    android:backgroundTint="#2E7D32"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- VISÃO EXCLUSIVA DO MASTER: FORMULÁRIO DE AGENDAMENTO -->
+        <LinearLayout
+            android:id="@+id/layoutMasterAgendamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#FFA000"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⚙️ Agendar / Alterar Rito (Exclusivo Master)"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#EF6C00"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo de Cerimônia"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#37474F"
+                        android:layout_marginBottom="4dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTipoRito"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data da Reunião"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#37474F"
+                        android:layout_marginBottom="4dp" />
+
+                    <EditText
+                        android:id="@+id/etDataRito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ex: 05/09/2026"
+                        android:textSize="13sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Horário"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#37474F"
+                        android:layout_marginBottom="4dp" />
+
+                    <EditText
+                        android:id="@+id/etHoraRito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ex: 10:00 - 10:30"
+                        android:textSize="13sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Link da Videochamada (Meet / Teams)"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#37474F"
+                        android:layout_marginBottom="4dp" />
+
+                    <EditText
+                        android:id="@+id/etLinkVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="https://meet.google.com/abc-defg-hij"
+                        android:textSize="13sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:padding="12dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <Button
+                        android:id="@+id/btnSalvarAgendamento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Publicar Rito para o Time"
+                        android:backgroundTint="#EF6C00"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

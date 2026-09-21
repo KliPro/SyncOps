@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SyncOps</string>
+    <string-array name="status_disponibilidade_array">
+        <item>Disponível</item>
+        <item>Em reunião</item>
+        <item>Férias</item>
+        <item>Foco / Em desenvolvimento</item>
+    </string-array>
+
+    <string-array name="ritos_agile_array">
+        <item>🚀 Sprint Planning (Planejamento)</item>
+        <item>⏱️ Reunião Daily (Alinhamento)</item>
+        <item>📊 Revisão e Demo Review</item>
+        <item>🔄 Retrospectiva da Sprint</item>
+        <item>💡 Alinhamento / Refinamento</item>
+    </string-array>
+</resources>

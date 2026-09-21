@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FE">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- INDICADOR DO PERFIL ATIVO -->
+        <TextView
+            android:id="@+id/tvCurrentActiveProfileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🟢 Perfil Ativo: Membro"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:background="#E8F5E9"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- SEÇÃO COMUM: DADOS DO PERFIL SELECIONADO -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E8EAF6"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    app:cardCornerRadius="44dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#5C6BC0"
+                    app:strokeWidth="2dp"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:scaleType="centerInside"
+                        android:background="#EDE7F6"
+                        android:contentDescription="Avatar" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <EditText
+                    android:id="@+id/etProfileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome Completo"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:padding="10dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvProfileEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email@syncops.io"
+                    android:textSize="12sp"
+                    android:textColor="#78909C"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/etProfileRole"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Cargo"
+                        android:textSize="13sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:padding="10dp"
+                        android:layout_marginEnd="4dp" />
+
+                    <EditText
+                        android:id="@+id/etProfileDepartment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Departamento"
+                        android:textSize="13sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:padding="10dp"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+                <!-- STATUS DE DISPONIBILIDADE INTERATIVO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status de Disponibilidade"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#37474F"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start" />
+
+                <Spinner
+                    android:id="@+id/spinnerStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- CONTATO E INTEGRAÇÕES (Slack, Teams, GitHub, GitLab) -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔗 Contato e Integrações"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#3F51B5"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start" />
+
+                <EditText
+                    android:id="@+id/etSlackLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Link / Canal Slack"
+                    android:textSize="12sp"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etTeamsLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Link Microsoft Teams"
+                    android:textSize="12sp"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etGithubLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Perfil GitHub"
+                    android:textSize="12sp"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etGitlabLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Perfil GitLab"
+                    android:textSize="12sp"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnSaveProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Salvar Alterações deste Perfil"
+                    android:backgroundTint="#5C6BC0"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- BLOCO EXCLUSIVO: FUNÇÕES DE MEMBRO -->
+        <LinearLayout
+            android:id="@+id/layoutMemberSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#E8EAF6"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 Carga de Trabalho &amp; Competências (Membro)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#263238"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Issues Alocadas: 4 ativas | 2 concluídas (12 pts)"
+                        android:textSize="12sp"
+                        android:textColor="#546E7A"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvSkillsDisplay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="[Java] [Android]"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#3F51B5"
+                        android:background="#EDE7F6"
+                        android:padding="8dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/etNewSkill"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_weight="1"
+                            android:hint="Nova habilidade..."
+                            android:textSize="12sp"
+                            android:background="@android:drawable/editbox_background_normal"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginEnd="6dp" />
+
+                        <Button
+                            android:id="@+id/btnAddSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:text="Adicionar"
+                            android:textSize="12sp"
+                            android:backgroundTint="#3F51B5"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- BLOCO EXCLUSIVO: FUNÇÕES DE MASTER -->
+        <LinearLayout
+            android:id="@+id/layoutMasterSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeColor="#FFA000"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🚀 Governança, Métricas &amp; Facilitação (Master)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#EF6C00"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Squads: SyncOps Core | Velocity: 28 pts | ⚠️ 1 Impedimento Ativo"
+                        android:textSize="12sp"
+                        android:textColor="#37474F"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📝 Notas de Facilitação / 1-on-1 (Privado)"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#263238"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/etMasterNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:gravity="top"
+                        android:hint="Anotações de feedbacks e alinhamentos..."
+                        android:textSize="12sp"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:padding="8dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/btnSaveNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Salvar Notas Privadas"
+                        android:backgroundTint="#EF6C00"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- BOTÕES DE TROCA RÁPIDA DE PERFIL -->
+        <Button
+            android:id="@+id/btnSwitchToMasterProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mudar para o Perfil de Scrum Master 🚀"
+            android:backgroundTint="#EF6C00"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnSwitchToMemberProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mudar para o Perfil de Membro 👤"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnToggleTheme"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌙 Mudar para Tema Escuro"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sair da Conta"
+            android:textColor="#D32F2F" />
+
+    </LinearLayout>
+</ScrollView>

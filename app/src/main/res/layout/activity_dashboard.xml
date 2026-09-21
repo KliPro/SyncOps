@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Barra de Topo com o Papel do Usuário (RBAC) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SyncOps"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUserRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="MEMBRO"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Contêiner onde os Fragments das Abas são carregados -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Barra de Navegação Inferior Otimizada -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="8dp">
+
+            <!-- Botão Sprint -->
+            <Button
+                android:id="@+id/nav_overview"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sprint"
+                android:textSize="11sp"
+                android:textColor="#3F51B5"
+                app:icon="@android:drawable/ic_menu_sort_by_size"
+                app:iconGravity="textTop"
+                app:iconTint="#3F51B5"
+                android:paddingHorizontal="12dp" />
+
+            <!-- Botão Tarefas -->
+            <Button
+                android:id="@+id/nav_tasks"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tarefas"
+                android:textSize="11sp"
+                android:textColor="#546E7A"
+                app:icon="@android:drawable/ic_menu_manage"
+                app:iconGravity="textTop"
+                app:iconTint="#546E7A"
+                android:paddingHorizontal="12dp" />
+
+            <!-- Botão Daily -->
+            <Button
+                android:id="@+id/nav_daily"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Daily"
+                android:textSize="11sp"
+                android:textColor="#546E7A"
+                app:icon="@android:drawable/ic_menu_recent_history"
+                app:iconGravity="textTop"
+                app:iconTint="#546E7A"
+                android:paddingHorizontal="12dp" />
+
+            <!-- Botão Ritos -->
+            <Button
+                android:id="@+id/nav_ceremonies"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ritos"
+                android:textSize="11sp"
+                android:textColor="#546E7A"
+                app:icon="@android:drawable/ic_menu_today"
+                app:iconGravity="textTop"
+                app:iconTint="#546E7A"
+                android:paddingHorizontal="12dp" />
+
+            <!-- Botão Perfil -->
+            <Button
+                android:id="@+id/nav_profile"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Perfil"
+                android:textSize="11sp"
+                android:textColor="#546E7A"
+                app:icon="@android:drawable/ic_menu_manage"
+                app:iconGravity="textTop"
+                app:iconTint="#546E7A"
+                android:paddingHorizontal="12dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

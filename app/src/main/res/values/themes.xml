@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.AppSyncOps" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Paleta de cores baseada na imagem de referência -->
+        <item name="colorPrimary">#5C6BC0</item> <!-- Azul Índigo Principal -->
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">#3F51B5</item>
+        <item name="android:windowBackground">#F8F9FE</item> <!-- Fundo levemente acinzentado clarinho igual à imagem -->
+        <item name="colorSurface">@android:color/white</item>
+    </style>
+</resources>

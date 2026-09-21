@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores baseadas no Design System do seu CSS (SyncOps) -->
+    <color name="primary">#0284c7</color>
+    <color name="primary_dark">#0369a1</color>
+    <color name="accent">#10b981</color>
+    <color name="bg_body">#f8fafc</color>
+    <color name="bg_card">#ffffff</color>
+    <color name="text_color">#0f172a</color>
+    <color name="text_muted">#64748b</color>
+    <color name="border_color">#e2e8f0</color>
+
+    <!-- Cores padrão do sistema -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
